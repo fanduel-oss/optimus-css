@@ -1,6 +1,6 @@
 {
   "name": "optimus-css",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Inline CSS image references as base64 data-URIs",
   "repository": {
     "type": "git",
@@ -8,7 +8,7 @@
   },
   "homepage": "https://github.com/roryf/optimus-css",
   "bugs": {
-    "url" : "https://github.com/roryf/optimus-css/issues"
+    "url": "https://github.com/roryf/optimus-css/issues"
   },
   "main": "optimus.js",
   "bin": {
