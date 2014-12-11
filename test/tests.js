@@ -40,7 +40,7 @@ test('it inlines relative image paths', function(t) {
   });
 });
 
-test('it inlines relative image paths', function(t) {
+test('it inlines absolute image paths', function(t) {
   var result = '';
   var source = fs.createReadStream(__dirname + '/css/absolute.css');
   var output = getWritableMock();
