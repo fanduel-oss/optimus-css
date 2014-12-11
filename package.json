@@ -1,0 +1,28 @@
+{
+  "name": "optimus-css",
+  "version": "0.1.0",
+  "description": "Inline CSS image references as base64 data-URIs",
+  "main": "optimus.js",
+  "bin": {
+    "optimus": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "keywords": [
+    "css",
+    "inline",
+    "base64",
+    "datauri"
+  ],
+  "author": "FanDuel, Inc.",
+  "license": "MIT",
+  "dependencies": {
+    "image-type": "^1.1.0",
+    "mime": "^1.2.11",
+    "yargs": "^1.3.3"
+  },
+  "devDependencies": {
+    "tape": "^3.0.3"
+  }
+}

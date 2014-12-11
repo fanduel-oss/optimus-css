@@ -1,0 +1,12 @@
+.relative {
+  background: url(../images/test.jpg);
+}
+.absolute {
+  background: url(/images/test.jpg);
+}
+.quotes {
+  background: url("../images/test.jpg");
+}
+.quotes-single {
+  background: url('/images/test.jpg');
+}
