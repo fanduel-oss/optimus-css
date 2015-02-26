@@ -92,6 +92,19 @@ test('it logs and ignores local files that do not exist', function(t) {
   });
 });
 
+test('it inlines encoded image paths', function(t) {
+  var result = '';
+  var source = fs.createReadStream(__dirname + '/css/encoded.css');
+  var output = getWritableMock();
+
+  source.pipe(optimus({ cwd: 'test', path: path.dirname('/css/encoded.css') })).pipe(output);
+
+  output.on('finish', function() {
+    t.equal(output.result, '.encoded {\n  background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/yQALCAABAAEBAREA/8wABgAQEAX/2gAIAQEAAD8A0s8g/9k=);\n}\n');
+    t.end();
+  });
+});
+
 // it('inlines remote images')
 
 // it('logs and ignores remote files that are not images')
