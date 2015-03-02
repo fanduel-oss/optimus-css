@@ -4,11 +4,11 @@
   "description": "Inline CSS image references as base64 data-URIs",
   "repository": {
     "type": "git",
-    "url": "git://github.com/roryf/optimus-css.git"
+    "url": "git://github.com/fanduel/optimus-css.git"
   },
-  "homepage": "https://github.com/roryf/optimus-css",
+  "homepage": "https://github.com/fanduel/optimus-css",
   "bugs": {
-    "url": "https://github.com/roryf/optimus-css/issues"
+    "url": "https://github.com/fanduel/optimus-css/issues"
   },
   "main": "optimus.js",
   "bin": {
