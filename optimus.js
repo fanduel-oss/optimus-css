@@ -15,7 +15,7 @@ function Optimus(options) {
 
   this.options = options;
   this.buffer = '';
-  this.finder = /url\(\s*[\'"]*(.+?)[\'"]*\s*\)/
+  this.finder = /url\(\s*[\'"]*(.+?)[\'"]*\s*\)/;
 }
 
 Optimus.prototype._transform = function(chunk, encoding, done) {
@@ -32,7 +32,7 @@ Optimus.prototype._transform = function(chunk, encoding, done) {
   while(match = this.finder.exec(this.buffer)) {
     index = match.index;
     length = match[0].length;
-    filename = match[1];
+    filename = decodeURI(match[1]);
     this.push(this.buffer.slice(0, index));
     try {
       if (filename[0] !== '/') {
